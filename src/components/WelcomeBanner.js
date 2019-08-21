@@ -8,33 +8,24 @@ function WelcomeBanner(props)
 	let styles = [
 		Styles.WelcomeBanner
 	]
-	
+
 	// Morning: 5:00 AM - 11:59 AM
-	if (5 <= hour && hour < 12)
-	{
-		greeting = 'Good morning'
-		styles.push(Styles.Light)
-	}
-
 	// Afternoon: 12:00 PM - 5:59 PM
-	else if (12 <= hour && hour < 18)
-	{
-		greeting = 'Good afternoon'
-	}
-
 	// Evening: 6:00 PM - 8:59 PM
-	else if (18 <= hour && hour < 21)
-	{
-		greeting = 'Good evening'
-		styles.push(Styles.Light)
-	}
-
 	// Night: 9:00 PM - 4:59 AM
-	else
-	{
-		greeting = 'It\'s late'
+
+	// Set proper greeting based on time
+	greeting = 5 <= hour && hour < 12
+		? 'Good morning'
+		: 12 <= hour && hour < 18
+			? 'Good afternoon'
+			: 18 <= hour && hour < 21
+				? 'Good evening'
+				: 'It\'s late'
+	
+	// Set the font color to white if the background is dark
+	if (hour < 12 || 18 <= hour)
 		styles.push(Styles.Light)
-	}
 
 	return (
 		<span className={ styles.join(' ') }>
