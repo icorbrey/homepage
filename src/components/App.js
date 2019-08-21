@@ -1,13 +1,14 @@
-import React from 'react'
-import Styles from '../sass/app.module.css'
+import React, { Component } from 'react'
+import Styles from '../sass/app.module.sass'
 
-function App()
+export default class App extends Component
 {
-	return (
-		<div className={ Styles.App }>
-			
-		</div>
-	)
+	render()
+	{
+		return (
+			<div className={ Styles.App }>
+				
+			</div>
+		)
+	}
 }
-
-export default App
