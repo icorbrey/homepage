@@ -1,0 +1,16 @@
+@import "breakpoints"
+	
+.Container
+	width: 100%
+	height: 100%
+	align-self: center
+
+.Breakpoints
+	@include breakpoint-up(sm)
+		max-width: 526px
+	@include breakpoint-up(md)
+		max-width: 718px
+	@include breakpoint-up(lg)
+		max-width: 942px
+	@include breakpoint-up(xl)
+		max-width: 1150px
