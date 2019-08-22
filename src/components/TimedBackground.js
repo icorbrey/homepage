@@ -1,7 +1,6 @@
 import React from 'react'
 import Granim from 'react-granim'
 import Particles from 'react-particles-js'
-import { tryStatement } from '@babel/types';
 
 function TimedBackground(props)
 {
