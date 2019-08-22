@@ -13,7 +13,7 @@ export default class App extends Component
 		super(props)
 
 		this.state = {
-			dateTime: new Date(0, 0, 0, 3, 0, 0, 0)
+			dateTime: new Date()
 		}
 	}
 
